@@ -5,13 +5,12 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Created by p on 2017-10-25.
+ * Created by sayho on 2017-10-25.
  */
 public class main {
     public static BlockingQueue<String> queue = new LinkedBlockingQueue<>();
 
     public static void main(String ... args){
-
         new Thread(()->{
             try{
                 while(true){
@@ -27,7 +26,6 @@ public class main {
 
     }
 
-
     public static void startPooling(int poolSize){
         for(int e = 0; e < poolSize; e++){
             new Thread(()->{
@@ -42,6 +40,7 @@ public class main {
             }).start();
         }
     }
+
 
 
 }
